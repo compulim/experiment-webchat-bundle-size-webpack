@@ -1,0 +1,33 @@
+{
+  "name": "webchat-bundle-size-webpack",
+  "version": "0.0.0-0",
+  "description": "",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "build": "npm run build:webpack",
+    "build:webpack": "webpack",
+    "start": "concurrently --kill-others --names \"server,webpack\" \"serve dist\" \"npm run start:webpack\"",
+    "start:webpack": "npm run build:webpack -- --watch"
+  },
+  "author": "William Wong <compulim@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "botframework-webchat": "4.10.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.3.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "prettier": "^2.0.5",
+    "serve": "^11.3.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-stats-plugin": "^0.3.2"
+  }
+}
