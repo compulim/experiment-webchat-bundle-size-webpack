@@ -1,9 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import ReactWebChat from 'botframework-webchat/lib/index-minimal';
-import { createDirectLine } from 'botframework-webchat';
-
-// render(<div>Hello, World!</div>, document.getElementById('app'));
+import ReactWebChat, { createDirectLine } from 'botframework-webchat/lib/index-minimal'; // This will NOT load Speech SDK.
+// import ReactWebChat, { createDirectLine } from 'botframework-webchat'; // This will load Speech SDK.
 
 (async function () {
   const res = await fetch('https://webchat-mockbot2.azurewebsites.net/api/token/directline', { method: 'POST' });
