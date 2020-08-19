@@ -1,6 +1,5 @@
 const { join } = require('path');
 const { StatsWriterPlugin } = require('webpack-stats-plugin');
-const BabelLoader = require('babel-loader');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
